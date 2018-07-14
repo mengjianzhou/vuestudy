@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello vue</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    test1:<input type="text" v-model="t1"><br>
+    test2:<input type="text" v-model="t2"><br>
+    test3:<input type="text" v-model="t3"><br>
+    test4:<input type="text" ><br>
+</div>
+
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            t1: 'A',
+            t2: 'B'
+        },
+        computed:{
+            t3(){
+                console.log("t3");
+                return this.t1 +' '+this.t2
+            }
+        }
+    })
+</script>
+</body>
+</html>
